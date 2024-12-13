@@ -1,0 +1,140 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, lightblue, #8a95ff, #d4a3ff);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Heading Section */
+  #heading {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  #title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #description {
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    margin-top: 0.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Main Form */
+  #main {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 400px;
+    max-height: 70vh; /* Limits the height of the form */
+    overflow-y: auto; /* Adds scrolling if content exceeds the height */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  .form:focus {
+    outline: none;
+    border: 2px solid #ff8cfc;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  #submit {
+    background: linear-gradient(90deg, #ff8cfc, #8a95ff, #d4a3ff);
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+  }
+  
+  #submit:hover {
+    background: linear-gradient(90deg, #d4a3ff, #8a95ff, #ff8cfc);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Confetti */
+  #confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  /* Confetti Animation */
+  .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: fall 5s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 480px) {
+    #title {
+      font-size: 2rem;
+    }
+  
+    #description {
+      font-size: 1rem;
+    }
+  
+    #main {
+      max-height: 60vh; /* Adjust for smaller screens */
+      padding: 1rem;
+    }
+  
+    .form {
+      font-size: 0.9rem;
+    }
+  
+    #submit {
+      font-size: 0.9rem;
+    }
+  }
+  
